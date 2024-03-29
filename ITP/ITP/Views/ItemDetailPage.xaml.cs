@@ -1,0 +1,15 @@
+﻿using ITP.ViewModels;
+using System.ComponentModel;
+using Xamarin.Forms;
+
+namespace ITP.Views
+{
+    public partial class ItemDetailPage : ContentPage
+    {
+        public ItemDetailPage()
+        {
+            InitializeComponent();
+            BindingContext = new ItemDetailViewModel();
+        }
+    }
+}

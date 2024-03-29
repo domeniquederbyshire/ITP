@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ITP.Views.NewItemPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="New Item"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Enter the details of your event below:" Style="{StaticResource TitleLabelStyle}" ></Label>
+            <StackLayout Spacing="3" Padding="15">
+                <Label Text="Event name" FontSize="Medium" TextColor="Black" />
+                <Entry Text="{Binding EventName, Mode=TwoWay}" FontSize="Medium" />
+                <Label Text="Event date" FontSize="Medium" TextColor="Black"/>
+                <Editor Text="{Binding EventDate, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+                <Label Text="Amount required" FontSize="Medium" TextColor="Black"/>
+                <Editor Text="{Binding EventValue, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
