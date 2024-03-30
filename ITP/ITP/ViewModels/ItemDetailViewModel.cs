@@ -11,8 +11,9 @@ namespace ITP.ViewModels
     {
         private string itemId;
         private string eventName;
-        private string eventDate; 
-        private string eventValue; 
+        private DateTime eventDate; 
+        private double eventValue;
+        public string EventDateFormatted { get; set; }
 
         public string Id { get; set; }
 
@@ -22,13 +23,13 @@ namespace ITP.ViewModels
             set => SetProperty(ref eventName, value);
         }
 
-        public string EventDate
+        public DateTime EventDate
         {
             get => eventDate;
             set => SetProperty(ref eventDate, value);
         }
 
-        public string EventValue
+        public double EventValue
         {
             get => eventValue;
             set => SetProperty(ref eventValue, value);

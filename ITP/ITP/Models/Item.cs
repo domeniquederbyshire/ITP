@@ -6,7 +6,8 @@ namespace ITP.Models
     {
         public string Id { get; set; }
         public string EventName { get; set; }
-        public string EventDate { get; set; }
-        public string EventValue { get; set; }
+        public DateTime EventDate { get; set; }
+        public double EventValue { get; set; }
+        public string EventDateFormatted { get; set; }
     }
 }

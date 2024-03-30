@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+//the MockDataStore class serves as a placeholder for a data storage mechanism - removes the need for the repository to be attached to a database for the time being. Instead, it uses an in-memory list (items) to simulate data storage.
+
 namespace ITP.Services
 {
     public class MockDataStore : IDataStore<Item>
@@ -14,7 +16,7 @@ namespace ITP.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), EventName = "Event name placeholder", EventDate="event date placeholder", EventValue="event value placeholder" },
+                new Item { Id = Guid.NewGuid().ToString(), EventName = "Event name placeholder", EventDate = DateTime.Now, EventValue= 0.0 },
 
             };
         }

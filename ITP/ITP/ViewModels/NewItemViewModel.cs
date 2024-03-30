@@ -10,8 +10,8 @@ namespace ITP.ViewModels
     public class NewItemViewModel : BaseViewModel
     {
         private string eventName;
-        private string eventDate;
-        private string eventValue;
+        private DateTime eventDate;
+        private double eventValue;
 
         public NewItemViewModel()
         {
@@ -23,9 +23,18 @@ namespace ITP.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(eventName)
-                && !String.IsNullOrWhiteSpace(eventDate)
-                && !String.IsNullOrWhiteSpace(eventValue);
+            if (String.IsNullOrWhiteSpace(eventName))
+                return false;
+
+            // Check if eventValue is a valid double amount
+            if (eventValue <= 0)
+            return false;
+
+            if (eventDate == DateTime.MinValue && eventDate < DateTime.Today)
+            return false;
+
+            return true;
+
         }
 
 
@@ -35,13 +44,13 @@ namespace ITP.ViewModels
             set => SetProperty(ref eventName, value);
         }
 
-        public string EventDate
+        public DateTime EventDate
         {
             get => eventDate;
             set => SetProperty(ref eventDate, value);
         }
 
-        public string EventValue
+        public double EventValue
         {
             get => eventValue;
             set => SetProperty(ref eventValue, value);

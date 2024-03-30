@@ -14,10 +14,10 @@
     <StackLayout Padding="10,5">
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Padding="10" HorizontalOptions="Start" VerticalOptions="Center">
-                <Label Text ="Upcoming events" Style="{StaticResource TitleLabelStyle}"  IsVisible="{Binding Items.Any}"/>
+                <Label Text ="Upcoming events" Style="{StaticResource TitleLabelStyle}" />
             </StackLayout>
         </StackLayout>
-        <Label Text="No upcoming events" IsVisible="{Binding Items.Empty}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Style="{StaticResource TitleLabelStyle}" />
+        <Label Text="No upcoming events" Style="{StaticResource TitleLabelStyle}" Padding="10"/>
         <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
             <CollectionView x:Name="ItemsListView"
             ItemsSource="{Binding Items}"
@@ -33,7 +33,7 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Text="{Binding EventDate}"
+                                    <Label Text="{Binding EventDateFormatted}"
                                 Grid.Column="0"
                                 LineBreakMode="WordWrap"
                                 Style="{DynamicResource ListItemDetailTextStyle}"

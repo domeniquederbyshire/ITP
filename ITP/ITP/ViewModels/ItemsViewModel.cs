@@ -3,6 +3,7 @@ using ITP.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -38,6 +39,7 @@ namespace ITP.ViewModels
                 var items = await DataStore.GetItemsAsync(true);
                 foreach (var item in items)
                 {
+                    item.EventDateFormatted = item.EventDate.ToString("dd MMM", CultureInfo.InvariantCulture).ToUpper();
                     Items.Add(item);
                 }
             }

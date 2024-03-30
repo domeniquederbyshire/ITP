@@ -11,6 +11,8 @@
             <Style TargetType="Label" x:Key="TitleLabelStyle">
                 <Setter Property="TextColor" Value="black" />
                 <Setter Property="FontSize" Value="18" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Start"/>
             </Style>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>

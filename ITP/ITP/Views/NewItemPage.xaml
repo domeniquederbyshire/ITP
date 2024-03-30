@@ -13,7 +13,7 @@
                 <Label Text="Event name" FontSize="Medium" TextColor="Black" />
                 <Entry Text="{Binding EventName, Mode=TwoWay}" FontSize="Medium" />
                 <Label Text="Event date" FontSize="Medium" TextColor="Black"/>
-                <Editor Text="{Binding EventDate, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+                <DatePicker Date="{Binding EventDate, Mode=TwoWay}" Format="dd MMM yyyy" />
                 <Label Text="Amount required" FontSize="Medium" TextColor="Black"/>
                 <Editor Text="{Binding EventValue, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
                 <StackLayout Orientation="Horizontal">
