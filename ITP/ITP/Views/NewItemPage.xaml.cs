@@ -16,6 +16,7 @@ namespace ITP.Views
         {
             InitializeComponent();
             BindingContext = new NewItemViewModel();
+
         }
     }
 }

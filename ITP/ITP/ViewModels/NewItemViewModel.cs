@@ -30,7 +30,7 @@ namespace ITP.ViewModels
             if (eventValue <= 0)
             return false;
 
-            if (eventDate == DateTime.MinValue && eventDate < DateTime.Today)
+            if (eventDate == DateTime.MinValue)
             return false;
 
             return true;

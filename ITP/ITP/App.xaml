@@ -7,26 +7,42 @@
     -->
     <Application.Resources>
         <ResourceDictionary>
+            <LinearGradientBrush x:Key="GradientBackground">
+                <GradientStop Color="#5DB483" Offset="0.5" />
+                <GradientStop Color="#008000" Offset="1" />
+            </LinearGradientBrush>
+            <LinearGradientBrush x:Key="GradientBackground1">
+                <GradientStop Color="#487D59" Offset="0.5" />
+                <GradientStop Color="#024731" Offset="1" />
+            </LinearGradientBrush>
+            <LinearGradientBrush x:Key="GradientBackground2">
+                <GradientStop Color="#75B3DD" Offset="0.5" />
+                <GradientStop Color="#000080" Offset="1" />
+            </LinearGradientBrush>
             <Color x:Key="Primary">#024731</Color>
             <Style TargetType="Label" x:Key="TitleLabelStyle">
                 <Setter Property="TextColor" Value="black" />
                 <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
                 <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="HorizontalOptions" Value="Start"/>
             </Style>
-            <Style TargetType="Button">
-                <Setter Property="TextColor" Value="White"></Setter>
+            <Style TargetType="Button" x:Key="ButtonStyle1">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="Transparent"/>
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Disabled">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#332196F3" />
+                                    <Setter Property="BackgroundColor" Value="Transparent" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>

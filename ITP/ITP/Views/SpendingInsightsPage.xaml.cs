@@ -7,20 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ITP
+namespace ITP.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Tools : ContentPage
+    public partial class SpendingInsightsPage : ContentPage
     {
-        public Tools()
+        public SpendingInsightsPage()
         {
             InitializeComponent();
         }
-
-        private async void GoToItemsPage_Clicked(object sender, EventArgs e)
-        {
-            await Shell.Current.GoToAsync("//ItemsPage"); // Navigate to the ItemsPage
-        }
     }
 }
-

@@ -5,7 +5,8 @@
              Shell.PresentationMode="ModalAnimated"
              Title="New Item"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             ios:Page.UseSafeArea="true">
+             ios:Page.UseSafeArea="true"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Enter the details of your event below:" Style="{StaticResource TitleLabelStyle}" ></Label>
@@ -13,7 +14,7 @@
                 <Label Text="Event name" FontSize="Medium" TextColor="Black" />
                 <Entry Text="{Binding EventName, Mode=TwoWay}" FontSize="Medium" />
                 <Label Text="Event date" FontSize="Medium" TextColor="Black"/>
-                <DatePicker Date="{Binding EventDate, Mode=TwoWay}" Format="dd MMM yyyy" />
+                <DatePicker Date="{Binding EventDate, Mode=TwoWay}" Format="dd MMM yyyy" MinimumDate="{x:Static sys:DateTime.Today}" />
                 <Label Text="Amount required" FontSize="Medium" TextColor="Black"/>
                 <Editor Text="{Binding EventValue, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
                 <StackLayout Orientation="Horizontal">
