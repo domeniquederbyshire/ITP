@@ -8,8 +8,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <LinearGradientBrush x:Key="GradientBackground">
-                <GradientStop Color="#5DB483" Offset="0.5" />
-                <GradientStop Color="#008000" Offset="1" />
+                <GradientStop Color="#FFFFFF" Offset="0.1" />
+                <GradientStop Color="#D3D3D3" Offset="0.9" />
             </LinearGradientBrush>
             <LinearGradientBrush x:Key="GradientBackground1">
                 <GradientStop Color="#487D59" Offset="0.5" />
@@ -19,9 +19,9 @@
                 <GradientStop Color="#75B3DD" Offset="0.5" />
                 <GradientStop Color="#000080" Offset="1" />
             </LinearGradientBrush>
-            <Color x:Key="Primary">#024731</Color>
+            <Color x:Key="Primary">#1B2631</Color>
             <Style TargetType="Label" x:Key="TitleLabelStyle">
-                <Setter Property="TextColor" Value="black" />
+                <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontSize" Value="18" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="HorizontalOptions" Value="StartAndExpand" />

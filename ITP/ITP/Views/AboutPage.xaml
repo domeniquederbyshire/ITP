@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ITP.Views.AboutPage"
              xmlns:vm="clr-namespace:ITP.ViewModels"
-             BackgroundColor="Black">
+             BackgroundColor="#1B2631  ">
 
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -14,10 +14,10 @@
         <StackLayout Padding="0, 2">
             <Frame Background="{StaticResource GradientBackground}" Padding="30,10,30,10" CornerRadius="30">
                 <StackLayout>
-                    <Label Text="Account Type" HorizontalTextAlignment="Left" TextColor="White" FontSize="20"/>
-                    <Label Text="£XXX" HorizontalTextAlignment="Left" TextColor="White" FontSize="30"/>
-                    <Label Text="Available" HorizontalTextAlignment="Left" TextColor="White" FontSize="15"/>
-                    <Label Text="SORT CODE                    ACCOUNT NUMBER" HorizontalTextAlignment="Left" TextColor="White" FontSize="15"/>
+                    <Label Text="Account Type" HorizontalTextAlignment="Left" TextColor="Black" FontSize="20"/>
+                    <Label Text="£XXX" HorizontalTextAlignment="Left" TextColor="Black" FontSize="30"/>
+                    <Label Text="Available" HorizontalTextAlignment="Left" TextColor="Black" FontSize="15"/>
+                    <Label Text="SORT CODE                    ACCOUNT NUMBER" HorizontalTextAlignment="Left" TextColor="Black" FontSize="15"/>
                 </StackLayout>
             </Frame>
         </StackLayout>
